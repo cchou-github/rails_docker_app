@@ -15,5 +15,8 @@ module RailsDockerApp
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.eager_load = true
+
+    config.autoload_paths += %W(#{config.root}/app/workers)
   end
 end
